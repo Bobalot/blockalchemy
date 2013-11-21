@@ -1,0 +1,35 @@
+engine.py
+  ObeliskRequest / ObeliskResponse
+    Simple struct with the fields for a req / rep.
+  ObeliskService
+    Interface to obelisk service. Takes requests, and adds replies to
+    a queue when received.
+
+error_code.py
+  List of libbitcoin error codes.
+
+models.py
+  OutPoint
+    Represents output point object (hash + index).
+  TxOut / TxIn / Transaction
+    Transaction abstractions which can be printed, serialized/deserialized,
+    and hashed.
+  BlockHeader
+  TransactionList
+  Block
+    A full block: BlockHeader + TransactionList.
+  Address
+    Normal Bitcoin address (version byte + hash).
+  history_row
+    A row from a fetch_history() request result.
+
+serialize.py
+  Serialization and deserialization functions for base types (int, str,
+  vector), transactions and blocks.
+
+  deser_data(command, data)
+    Deserializes an Obelisk response depending on the command for the request.
+
+util.py
+  base58 stuff.
+
